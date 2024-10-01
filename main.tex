@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to A4. change to letterpaper for US/Canadian resumes
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+
+
+
+
+
+
+% resume starts here
+\begin{document}
+
+
+
+% name
+\centerline{\Huge Perry Chien}
+
+\vspace{5pt}
+
+
+
+% contact information
+\centerline{{\textbf{US Permanent Resident}} | {(510) 994-9074} | \href{mailto:peichi1@uw.edu}{peichi1@uw.edu} | \href{https://www.linkedin.com/in/peichi1/}{linkedin.com/in/peichi1}}
+
+\vspace{-10pt}
+
+
+
+% education section
+\section*{Education}
+\textbf{University of Washington, Seattle} -- \textit{B.S. Computer Science \& Intended B.A. Mathematics, GPA: 3.8} \hfill June 2026 \\
+\textbf{{Relevant Coursework}} -- Data Structures \& Algorithms, Systems Programming, Programming Languages, Software Design \& Implementation, Applied Numerical Methods, Digital Circuits \& Systems, Circuit Analysis \\
+
+\vspace{-6.5pt}
+
+
+
+% skills section
+\section*{Skills}
+\textbf{Languages:} Python, C, C++, Java, Golang, SQL, JavaScript, Verilog, MATLAB, \LaTeX \\
+\textbf{Tools:} Git, OracleDB, SQLite, OpenCV, React, Flask, Tailwind CSS, Tableau, Arduino, KiCad, SolidWorks \\
+
+\vspace{-6.5pt}
+
+
+
+
+
+% projects section
+\section*{Projects}
+\textbf{YouTube Shorts Autogenerator} | \textit{Golang, C++, Python, React} \hfill Aug 2024 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Architected a \textbf{Golang} pipeline to handle user inputs, integrate \textbf{OpenAI API} scripts, and process video assets
+  \item Streamlined processing in \textbf{C++}/\textbf{Python}, automating video creation, content generation, and format conversion
+  \item Developed a \textbf{React} frontend for user inputs, integrated with the pipeline for video generation
+\end{itemize}
+
+\textbf{Oncology Research Lab, UW Medicine} | \textit{Python, OpenCV, PyTorch} \hfill May 2023 -- Sep 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed an automatic cell counter mini-project using \textbf{OpenCV} for image processing and \textbf{PyTorch} for cell-type identification via NLP-based user inputs
+  \item Cleaned, analyzed and visualized high-throughput screen data using \textbf{pandas}, \textbf{seaborn}, \textbf{matplotlib}, and \textbf{Excel}, then presented at the 2024 UW Research Symposium
+\end{itemize}
+
+\textbf{FPGA Conway's Game of Life} | \textit{Intel Quartus, SystemVerilog, ModelSim} \hfill April 2024 -- June 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Implemented the Game of Life on \textbf{Altera DE1-SoC} with \textbf{16x16 LED board} using \textbf{SystemVerilog}, simulating cellular automata with real-time controls and display on LEDs \& seven-segment displays
+  \item Designed a blinker pattern detection system, tracking and counting up to 15 patterns using a 4-bit system
+\end{itemize}
+
+\vspace{-6.5pt}
+
+
+
+
+
+
+% experience section
+\section*{Experience}
+\textbf{Engineering Intern}, TSMC Fab 11 -- Camas, WA \hfill June 2024 -- Sep 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed a defect manager GUI using \textbf{OpenCV}, \textbf{OpenPyXL}, and \textbf{PyQt5}, increasing troubleshooting efficiency and saving \textbf{2 hours per week for thin film engineers}
+  \item Refactored PVD aging parts tracking data to be compatible with both \textbf{OracleDB} and \textbf{SQLite serverless databases}, and implemented a \textbf{Flask RESTful API} for data entries and synchronization
+  \item Designed a \textbf{Power BI-optimized web UI} with \textbf{Flask Jinja2} for parts querying, which aided fab maintenance planning and reduced workload by \textbf{1 hour per week for PVD technicians}
+  \item Integrated plasma sensor using \textbf{KiCad}, \textbf{breadboards}, \textbf{Arduino}, and \textbf{SolidWorks} to incorporate timing-switch IC's \& optocouplers for reconfigurable controls, expecting \textbf{20\% improvement in chamber power efficiency}
+\end{itemize}
+
+\textbf{Instrumentation Optics Lead}, Husky Robotics -- Seattle, WA \hfill Jan 2023 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item \textbf{Supervised optical implementations} to the Rover CLI in \textbf{Python}, integrating a GPS panorama script with \textbf{gpsd} for GNSS data retrieval and processing, replacing \textbf{WebSocket-based} metadata handling
+  \item \textbf{Led a team of three} to develop a makeshift stereo camera for depth estimation, utilizing \textbf{NumPy matrix operations} and triangulation of snapshots with a singular \textbf{OpenCV-calibrated} camera module
+  \item Designed in \textbf{SolidWorks} and 3D-printed a \textbf{robust mounting system} that integrates optics (\textit{i.e.} servo-controlled microscope and camera modules), atmospheric sensors, and drill
+  \item Placed 2nd/3rd at Canadian International Rover Challenge 2023/2024, CSWA Associate: Mech Design
+\end{itemize}
+
+\textbf{Corporate Relations}, IEEE UW Chapter (Eta Kappa Nu) -- Seattle, WA \hfill Nov 2023 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Coordinated with PNW industry outreach to hold career, academic and social events for ECE students
+  \item Designed for ECE department merch sales, then facilitated logistics for approx. 100 orders
+\end{itemize}
+
+\vspace{-6.5pt}
+
+
+
+
+
+\end{document}
