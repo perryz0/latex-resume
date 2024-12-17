@@ -1,2 +1,2 @@
 # latex-resume
-Personal resume typesetted on LaTeX
+Personal resume typesetted on LaTeX. Switching to Jake's template soon (old one looks kinda shit)...
