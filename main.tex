@@ -1,152 +1,233 @@
-\documentclass[11pt]{article}       % set main text size
-\usepackage[letterpaper,                % set paper size to A4. change to letterpaper for US/Canadian resumes
-top=0.5in,                          % specify top page margin
-bottom=0.5in,                       % specify bottom page margin
-left=0.5in,                         % specify left page margin
-right=0.5in]{geometry}              % specify right page margin
-                       
-\usepackage{XCharter}               % set font
-\usepackage[T1]{fontenc}            % output encoding
-\usepackage[utf8]{inputenc}         % input encoding
-\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
-\usepackage[hidelinks]{hyperref}    % format hyperlinks
-\usepackage{titlesec}               % enable section title customization
-\raggedright                        % disable text justification
-\pagestyle{empty}                   % disable page numbering
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-% ensure PDF output will be all-Unicode and machine-readable
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 \input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-% format section headings: bolding, size, white space above and below
-\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
 
-% format bullet points: size, white space above and below, white space between bullets
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
-\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-
-
-% resume starts here
 \begin{document}
 
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Perry Chien} \\ \vspace{1pt}
+    \small \textbf{US Citizen} $|$ {(510) 994-9074} $|$ \href{mailto:peichi1@uw.edu}{\underline{peichi1@uw.edu}} $|$ 
+    \href{https://www.linkedin.com/in/peichi1/}{\underline{linkedin.com/in/peichi1}} $|$
+    \href{https://github.com/perryz0}{\underline{github.com/perryz0}}
+\end{center}
 
 
-% name
-\centerline{\Huge Perry Chien}
-
-\vspace{5pt}
-
-
-
-% contact information
-\centerline{{\textbf{US Citizen}} | {(510) 994-9074} | \href{mailto:peichi1@uw.edu}{peichi1@uw.edu} | \href{https://www.linkedin.com/in/peichi1/}{linkedin.com/in/peichi1} | \href{https://github.com/perryz0}{github.com/perryz0}}
-
-\vspace{-10pt}
-
-
-
-% education section
-\section*{Education}
-\textbf{University of Washington, Seattle} \hfill Expected Graduation: June 2026 \\
-\textit{B.S. Computer Science \& Intended B.A. Mathematics, GPA: 3.8} \\
-\textbf{{Relevant Coursework}}: Data Structures \& Algorithms, Systems Programming, Hardware-Software Interface, Software Design \& Implementation, Applied Numerical Methods, Digital Circuits, Operating Systems \textit{(planned)} \\
-
-\vspace{-7.5pt}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Washington}{Seattle, WA}
+      {B.S. Computer Science, Intended B.A. Mathematics, GPA: 3.8}{Sep. 2022 -- June 2026}
+  \resumeSubHeadingListEnd
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Coursework}{: Data Structures \& Parallelism, Systems Programming, Software Design \& Implementation, Digital Circuits, Numerical Methods, Distributed Systems, Networks \textit{(planned)}, Design \& Analysis of Algorithms \textit{(planned)}}
+    }}
+ \end{itemize}
 
 
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Husky Robotics}{Jan. 2023 -- Present}
+      {Drone Software Lead}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Developing FPV drone by integrating open-source firmware with modular peripherals from scratch, such as a mechatronic grabber for object delivery and stereo-vision based terrain analyzer}
+        \resumeItem{Leveraged LoRa RF wireless modules \& high-gain WiFi antennas for long-range telemetry and video optimization}
+        \resumeItem{Led seven developers, and did weekly stand-ups with mechanical \& business teams to refine design \& fundraising}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+   \resumeSubSubheading
+    {Optics Software Lead}{Jan. 2023 - Jun 2024}
+    \resumeItemListStart
+       \resumeItem
+         {Integrated a OpenCV-based panorama generator backend with gpsd daemon for GNSS data handling}
+         \resumeItem
+         {Designed in SolidWorks and printed a modularized mounting system that integrates science instruments}
+    \resumeItemListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {TSMC Fab 11}{June 2024 -- Sep. 2024}
+      {Engineering Intern}{Camas, WA}
+      \resumeItemListStart
+        \resumeItem{Developed a defect manager using OpenCV and PyQt5, saving 2 hours of troubleshooting per week for engineers}
+        \resumeItem{Refactored semiconductor data for OracleDB \& SQLite schemas, built RESTful API for CRUD operations}
+        \resumeItem{Designed query processor with Power BI and Jinja2, reducing maintenance workload by 1 hour per week}
+        \resumeItem{Designed timing-regulated relay circuit for chamber system using KiCad \& SolidWorks, optimizing power usage}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {IEEE-HKN UW Chapter}{Nov. 2023 -- Present}
+      {Corporate Relations Chair}{Seattle, WA}
+      \resumeItemListStart
+        \resumeItem{Coordinated with local PNW companies to hold career, academic and social events for ECE students}
+        \resumeItem{Designed for ECE department merch sales, then facilitated logistics for approximately 100 customer orders}
+      \resumeItemListEnd
+      
+   \resumeSubHeadingListEnd
 
 
-
-
-
-
-
-% experience section
-\section*{Experience}
-
-\textbf{Engineering Intern}, TSMC Fab 11 -- Camas, WA \hfill June 2024 -- Sep 2024 \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Developed a defect manager GUI using \textbf{OpenCV}, \textbf{OpenPyXL}, and \textbf{PyQt5}, increasing troubleshooting efficiency and saving \textbf{2 hours per week for thin film engineers}
-  \item Restructured aging PVD parts data to support both \textbf{OracleDB} and \textbf{SQLite} schemas, then implemented \textbf{RESTful API} for CRUD operations on data entries and synchronization
-  \item Built part-querying UI with \textbf{Power BI} and \textbf{Flask Jinja2}, reducing maintenance workload by \textbf{1 hour per week}
-  \item Integrated plasma sensor using \textbf{KiCad}, \textbf{breadboards}, \textbf{Arduino}, and \textbf{SolidWorks} to incorporate timing-switch IC's \& optocouplers for reconfigurable controls, expecting \textbf{20\% improvement in chamber power efficiency}
-\end{itemize}
-
-\textbf{Instrumentation Optics Lead}, Husky Robotics -- Seattle, WA \hfill Jan 2023 -- Present \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Supervised optical implementations to the \textbf{Rover CLI} in \textbf{Python}, integrating a \textbf{panorama generator backend} with \textbf{gpsd daemon} for GNSS data handling, replacing \textbf{WebSocket} GPS retrieval
-  \item \textbf{Led a team of three} to develop a \textbf{makeshift stereo camera} for depth estimation, utilizing NumPy matrix operations and triangulation of snapshots with a singular \textbf{OpenCV-calibrated} camera module
-  \item Designed in \textbf{SolidWorks} and 3D-printed a \textbf{modularized mounting system} that integrates science instruments
-  \item Obtained 2nd/3rd at Canadian International Rover Challenge 2023/2024, CSWA Associate: Mech Design
-\end{itemize}
-
-\textbf{Corporate Relations Chair}, IEEE UW Chapter (Eta Kappa Nu) -- Seattle, WA \hfill Nov 2023 -- Present \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Coordinated with PNW industry outreach to hold career, academic and social events for ECE students
-  \item Designed for ECE department merch sales, then facilitated logistics for approx. 100 orders
-\end{itemize}
-
-\vspace{-7.5pt}
-
-
-
-
-
-
-
-% projects section
-\section*{Projects}
-\textbf{Lhasa, DubHacks 2024} | \textit{Python, MongoDB, Perplexity API, Streamlit} \hfill Oct 2024 -- Present \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Built an AI-powered web app for generating itineraries and sharing travel plans among users with opt-in system
-  \item Designed frontend with \textbf{Streamlit}, integrated backend with \textbf{MongoDB} and \textbf{Perplexity API} using JSON parsing
-\end{itemize}
-
-
-\textbf{YouTube Shorts Autogenerator} | \textit{Golang, C++, Python, React} \hfill Aug 2024 -- Present \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Architected a \textbf{Golang} pipeline to handle user inputs, integrate \textbf{OpenAI API} scripts, and process video assets
-  \item Streamlined processing in \textbf{C++}/\textbf{Python}, automating video creation, content generation, and format conversion
-  \item Developing a \textbf{React} frontend for user inputs, integrated with the pipeline for video generation
-\end{itemize}
-
-\textbf{Oncology Research Lab, UW Medicine} | \textit{Python, OpenCV, PyTorch} \hfill May 2023 -- June 2024 \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Developing an auto cell counter using \textbf{OpenCV} and \textbf{PyTorch} for processing and ID via NLP-based user inputs
-  \item Cleaned, analyzed and visualized high-throughput screen data using \textbf{Python}, then presented at UW Symposium
-\end{itemize}
-
-\textbf{FPGA Conway's Game of Life} | \textit{Intel Quartus, SystemVerilog, ModelSim} \hfill April 2024 -- June 2024 \\
-\vspace{-7.5pt}
-\begin{itemize}
-  \item Implemented the Game of Life on \textbf{Altera DE1-SoC} with \textbf{16x16 LED board} using \textbf{SystemVerilog}, simulating cellular automata with real-time controls and display on LEDs \& seven-segment displays
-  \item Designed a blinker pattern recognition system, tracking and counting up to 15 patterns using a 4-bit system
-\end{itemize}
-
-\vspace{-7.5pt}
-
-
-
-
-
-
-
-% skills section
-\section*{Skills}
-\textbf{Languages:} Python, C, C++, Java, Golang, SQL, x86, TypeScript, Verilog, MATLAB, \LaTeX \\
-\textbf{Tools:} Git, Linux, OracleDB, SQLite, OpenCV, React, Flask, Tailwind CSS, Tableau, Arduino, KiCad, SolidWorks \\
-
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{IoT Plant Watering App} $|$ \emph{Next.js, Firebase, Tailscale, Apache Airflow, Nginx}}{Oct 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developing backend for a user-configurable, full-stack plant watering MVP app, collaborating in a team of eight}
+            \resumeItem{Leveraged IoT sensors to water plants, Raspberry Pi as a decision layer, Nginx as a lightweight request handler, Airflow as a task dispatcher, and Tailscale tailnet for remote team collaboration}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Tailscale Alert} $|$ \emph{Python, Tailscale}}{Nov. 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack Discord bot to streamline Tailscale-based team workflows, enables users to add, remove, and configure machines connected to the VPN mesh and notifies server about said operations (Github-interoperable)}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Panopto Scraper} $|$ \emph{TypeScript, Puppeteer, HTML}}{Dec. 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed Chrome extension to bypass Panopto restrictions and install lecture recordings, for non-commercial use}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Webserver Search Engine} $|$ \emph{C, C++, HTTP, DNS protocols, POSIX}}{Sep. 2024 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Built a complete webserver with local file crawler using C and C++ that serves a webpage interface, accepts client search requests, finds relevant documents and webpages in its index, then serves a response over the Internet}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Lhasa, DubHacks 2024} $|$ \emph{Python, MongoDB, Streamlit}}{Oct. 2024 -- Nov. 2024}
+          \resumeItemListStart
+            \resumeItem{Built an AI-powered web app for generating itineraries and sharing travel plans among users with opt-in system}
+            \resumeItem{Integrated backend with MongoDB and Perplexity API using JSON parsing, while teammate designed frontend}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{FPGA Conway's Game of Life} $|$ \emph{Intel Quartus/Modelsim, SystemVerilog}}{Apr. 2024 -- June 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented on Altera DE1-SoC with 16x16 LED board, simulating automata with real-time controls and display}
+            \resumeItem{Designed a blinker pattern recognition system, tracking up to 15 counts using a 4-bit system}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 
 
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Java, Go, Python, TypeScript, SQL, x86, Verilog, MATLAB} \\
+     \textbf{Tools}{: Git, Linux, DBMS, OpenCV, React, Flask, Tableau, Arduino, KiCad, SolidWorks, \LaTeX}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
 \end{document}
